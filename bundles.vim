@@ -11,11 +11,11 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 " snippets
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
