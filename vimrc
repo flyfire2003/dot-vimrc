@@ -14,7 +14,8 @@ syntax on
 "--------
 " color scheme
 set background=dark
-color solarized
+"color solarized
+color Tomorrow-Night
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -34,7 +35,7 @@ set nofoldenable                                                  " disable fold
 set confirm                                                       " prompt when existing from an unsaved file
 set backspace=indent,eol,start                                    " More powerful backspacing
 set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
-set mouse=a                                                       " use mouse in all modes
+"set mouse=a                                                       " use mouse in all modes
 set report=0                                                      " always report number of lines changed                "
 set nowrap                                                        " dont wrap lines
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
@@ -50,9 +51,9 @@ set matchpairs+=<:>                                               " specially fo
 " Default Indentation
 set autoindent
 set smartindent     " indent when
-set tabstop=4       " tab width
-set softtabstop=4   " backspace
-set shiftwidth=4    " indent width
+set tabstop=2       " tab width
+set softtabstop=2   " backspace
+set shiftwidth=2    " indent width
 " set textwidth=79
 " set smarttab
 set expandtab       " expand tab to space
