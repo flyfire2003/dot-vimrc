@@ -76,6 +76,15 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " Plugin settings
 "-----------------
+"
+" YouComplete settings
+let g:ycm_server_python_interpreter='/home/yyang/anaconda3/bin/python3'
+let g:ycm_python_binary_path = '/home/yyang/anaconda3/bin/python3'
+let g:ycm_global_ycm_extra_conf='/home/yyang/.vim/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion=1
+map<leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
