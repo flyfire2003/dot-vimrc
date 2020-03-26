@@ -1,7 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=/home/yyang/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -13,7 +13,8 @@ Bundle 'gmarik/vundle'
 "------------------
 "Bundle 'Shougo/neocomplcache'
 "Bundle 'Shougo/neocomplete.vim'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'ycm-core/YouCompleteMe'
+Bundle 'rdnetto/YCM-Generator'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 "Bundle 'ervandew/supertab'
@@ -43,7 +44,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 " IDE features
 "--------------
 Bundle 'scrooloose/nerdtree'
-"Bundle 'humiaozuzu/TabBar'
+Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
@@ -85,7 +86,7 @@ Bundle 'tpope/vim-markdown'
 " Bundle 'tpope/vim-endwise'
 
 "------- Go ----------
-Bundle 'fatih/vim-go'
+" Bundle 'fatih/vim-go'
 
 "------- FPs ------
 "Bundle 'kien/rainbow_parentheses.vim'

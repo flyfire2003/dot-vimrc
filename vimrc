@@ -55,8 +55,9 @@ set tabstop=2       " tab width
 set softtabstop=2   " backspace
 set shiftwidth=2    " indent width
 " set textwidth=79
-" set smarttab
+set smarttab
 set expandtab       " expand tab to space
+set wrap
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -78,10 +79,9 @@ let g:html_indent_style1 = "inc"
 "-----------------
 "
 " YouComplete settings
-let g:ycm_server_python_interpreter='/home/yyang/anaconda3/bin/python3'
-let g:ycm_python_binary_path = '/home/yyang/anaconda3/bin/python3'
-let g:ycm_global_ycm_extra_conf='/home/yyang/.vim/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_server_python_interpreter='/usr/bin/python3'
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 map<leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
@@ -108,13 +108,13 @@ let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
 " tabbar
-"let g:Tb_MaxSize = 2
-"let g:Tb_TabWrap = 1
+let g:Tb_MaxSize = 2
+let g:Tb_TabWrap = 1
 
-"hi Tb_Normal guifg=white ctermfg=white
-"hi Tb_Changed guifg=green ctermfg=green
-"hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-"hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
+hi Tb_Normal guifg=white ctermfg=white
+hi Tb_Changed guifg=green ctermfg=green
+hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -161,11 +161,10 @@ let NERDTreeWinPos = "right"
 
 " nerdcommenter
 let NERDSpaceDelims=1
-" nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
 
 " ZenCoding
-let g:user_emmet_expandabbr_key='<C-j>'
+"let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
 "let g:Powerline_symbols = 'fancy'
@@ -175,13 +174,13 @@ set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_S
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-nmap <F5> :TagbarToggle<cr>
+"nnoremap <F2> :set invpaste paste?<CR>
+"set pastetoggle=<F2>
 nmap <F6> :NERDTreeToggle<cr>
+nmap <F7> :TagbarToggle<cr>
 nmap <F3> :GundoToggle<cr>
-nmap <F4> :IndentGuidesToggle<cr>
-nmap  <D-/> :
+"nmap <F4> :IndentGuidesToggle<cr>
+"nmap  <D-/> :
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
@@ -224,24 +223,3 @@ nnoremap ; :
 :command Qa qa
 :command QA qa
 
-" for macvim
-if has("gui_running")
-    set go=aAce  " remove toolbar
-    "set transparency=30
-    set guifont=Monaco:h13
-    set showtabline=2
-    set columns=140
-    set lines=40
-    noremap <D-M-Left> :tabprevious<cr>
-    noremap <D-M-Right> :tabnext<cr>
-    map <D-1> 1gt
-    map <D-2> 2gt
-    map <D-3> 3gt
-    map <D-4> 4gt
-    map <D-5> 5gt
-    map <D-6> 6gt
-    map <D-7> 7gt
-    map <D-8> 8gt
-    map <D-9> 9gt
-    map <D-0> :tablast<CR>
-endif
